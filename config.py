@@ -43,8 +43,8 @@ WEB_CONFIG = {
         "password": "Sheikh123!"  # Consider using environment variables for sensitive data
     },
     "urls": {
-        "base": "https://lottery.mt/",
-        "iframe_pattern": "dragonara.evo-games.com/frontend/evo/r2"
+        "base": "https://example-casino.com/", # Replace with the actual target URL
+        "iframe_pattern": "dragonara.evo-games.com/frontend/evo/r2" # Adjust if iframe pattern changes with base URL
     },
     "fibonacci_max_streak": 10, # Max losing streak for Fibonacci betting
     "data_collection_limit": 507 # Limit for historical data collection loop

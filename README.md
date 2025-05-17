@@ -2,7 +2,7 @@
 
 ## 1. Description
 
-This project is a Python-based application designed to predict roulette wheel outcomes using a TensorFlow/Keras LSTM model with an attention mechanism. It also includes a Selenium-based web scraper to interact with an online roulette game, extract live numbers, feed them to the predictor, and (conceptually) automate betting based on a Fibonacci strategy.
+This project is a Python-based application designed to predict roulette wheel outcomes using a TensorFlow/Keras LSTM model with an attention mechanism. It also includes a Selenium-based web scraper to interact with an online roulette game on a target website, extract live numbers, feed them to the predictor, and (conceptually) automate betting based on a Fibonacci strategy.
 
 The application is structured into several modules:
 - `main.py`: Main entry point for the application.
@@ -71,8 +71,8 @@ Open the `config.py` file and update the following sections as needed:
      - `password`: Your login password.
        **Security Note**: For better security, consider using environment variables or a dedicated secrets management tool instead of hardcoding credentials.
    - **`urls`**:
-     - `base`: The base URL of the lottery/casino website.
-     - `iframe_pattern`: A string pattern unique to the URL of the iframe containing the roulette game. This is used to identify and switch to the correct iframe.
+     - `base`: The base URL of the target online gaming platform. Example: `https://example-casino.com/` (Replace with the actual target URL).
+     - `iframe_pattern`: A string pattern unique to the URL of the iframe containing the roulette game. This is used to identify and switch to the correct iframe. (Adjust if iframe pattern changes with base URL).
 
 ### b. `CONFIG` (Model Configuration):
    - Review parameters like `window_size`, `prediction_size`, `model_file`, `state_file`, LSTM units, dropout rates, etc. Default values are provided.
@@ -106,7 +106,7 @@ To stop the bot, you can usually press `Ctrl+C` in the terminal where it's runni
 
 - **Betting Strategy**: The current implementation uses a Fibonacci sequence for bet sizing based on losing streaks. The actual betting on the website (placing chips) is not fully implemented in the provided `web_scraper.py`'s JavaScript execution part; it focuses on number extraction and prediction. The `WheelPredictor` simulates balance updates based on whether the outcome falls within its predicted section.
 - **Model Training**: The model trains periodically based on the accumulated data. The effectiveness of the predictions will depend heavily on the quality and quantity of data, as well as the model architecture and hyperparameters.
-- **Ethical Considerations**: This tool interacts with online gambling sites. Be aware of the terms of service of any website you use this on and the legal regulations regarding automated play in your jurisdiction. Gambling can be addictive; please play responsibly.
+- **Ethical Considerations**: This tool interacts with online gaming platforms. Be aware of the terms of service of any website you use this on and the legal regulations regarding automated play in your jurisdiction. Gambling can be addictive; please play responsibly.
 - **Error Handling**: The application includes logging for errors. Check the console output and log files (if configured) for troubleshooting.
 
 ## 7. `.gitignore`
