@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.log
+*.logs
+logs/
+
+# Keras/TensorFlow model and state files
+# These can be large and/or user-specific.
+# Uncomment if you do not want to commit them to the repository.
+# wheel_model.keras
+# predictor_state.pkl
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+pip-selfcheck.json
+
+# IDE specific
+.vscode/
+# .idea/ # Uncomment if you use JetBrains IDEs
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Credentials / Sensitive configuration
+# If you ever extract sensitive parts of config.py to a separate, ignored file
+# local_config.py
